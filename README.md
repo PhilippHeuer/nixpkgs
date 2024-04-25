@@ -46,6 +46,12 @@ Add packages to your `environment.systemPackages` or `home.packages`:
 - `reposync` - A tool to synchronize git repositories you have access to onto your local machine
 - ...
 
+## Contribute
+
+_build your package locally_
+
+`nix build .#reposync`
+
 ## License
 
 Released under the [MIT license](./LICENSE).
