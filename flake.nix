@@ -1,7 +1,7 @@
 {
   description = "NixOS Packages";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
 
   outputs = {
     self,
