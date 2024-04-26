@@ -2,20 +2,20 @@
 , stdenv
 , installShellFiles
 , fetchFromGitHub
-, buildGo122Module
+, buildGoModule
 }:
 
-buildGo122Module rec {
+buildGoModule rec {
   pname = "fuzzmux";
   version = "v0.5.1";
 
   src = fetchFromGitHub {
     owner = "PhilippHeuer";
     repo = "fuzzmux";
-    rev = "95c30a7b196facdd046d645093f31c1355c7e7dc";
-    sha256 = "sha256-pLT6dfaGL6nHr1CLDU0hE2Fh3npAEbJogWLPjQMVjHI=";
+    rev = "8c34c88fb0f6998fd04880ebb68a69ea2a964058";
+    sha256 = "sha256-WAjYYdnlZ661e8BGrUE4RUXPMgkctqWrvRKA2lkJZbY=";
   };
-  vendorHash = "sha256-UxFacs0DatErKEdGA4PgVu8nacyn9ddjqJajoTAbZFI=";
+  vendorHash = "sha256-iVJuTkjHgSVE/sDvRwk8pT70I/ffXuxWdwgvVI7w/zY=";
 
   ldflags = [
     "-X main.version=${version}"
