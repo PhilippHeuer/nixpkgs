@@ -18,6 +18,7 @@
       fuzzmux = prev.callPackage ./pkgs/fuzzmux {};
       reposync = prev.callPackage ./pkgs/reposync {};
       driveguard = prev.callPackage ./pkgs/driveguard {};
+      clipboard-sync = prev.callPackage ./pkgs/clipboard-sync {};
     };
 
     packages = genSystems (system: self.overlays.default null pkgsFor.${system});
