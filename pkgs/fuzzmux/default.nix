@@ -12,10 +12,10 @@ buildGoModule rec {
   src = fetchFromGitHub {
     owner = "PhilippHeuer";
     repo = "fuzzmux";
-    rev = "8c34c88fb0f6998fd04880ebb68a69ea2a964058";
-    sha256 = "sha256-WAjYYdnlZ661e8BGrUE4RUXPMgkctqWrvRKA2lkJZbY=";
+    rev = "d4d5fa37dc339fee6d6d6cdcb6e165763ccbbaa1";
+    sha256 = "sha256-lDXVSsS9IT3eo7RehR4kQoUSg6DMXSlIbakcB997DfU=";
   };
-  vendorHash = "sha256-iVJuTkjHgSVE/sDvRwk8pT70I/ffXuxWdwgvVI7w/zY=";
+  vendorHash = "sha256-+qWRKe4VkZCc4WabSXQzFQvyHRxXgdLBtauE5Yiw22M=";
 
   ldflags = [
     "-X main.version=${version}"
