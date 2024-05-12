@@ -14,6 +14,7 @@
     pkgsFor = nixpkgs.legacyPackages;
   in {
     overlays.default = _: prev: {
+      cid = prev.callPackage ./pkgs/cid {};
       dotfiles = prev.callPackage ./pkgs/dotfiles {};
       fuzzmux = prev.callPackage ./pkgs/fuzzmux {};
       reposync = prev.callPackage ./pkgs/reposync {};
