@@ -21,6 +21,7 @@
       driveguard = prev.callPackage ./pkgs/driveguard {};
       clipboard-sync = prev.callPackage ./pkgs/clipboard-sync {};
       openapi-changes = prev.callPackage ./pkgs/pb33f/openapi-changes {};
+      vacuum = prev.callPackage ./pkgs/pb33f/vacuum {};
     };
 
     packages = genSystems (system: self.overlays.default null pkgsFor.${system});
