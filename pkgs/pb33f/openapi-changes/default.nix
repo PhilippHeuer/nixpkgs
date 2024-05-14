@@ -11,7 +11,7 @@ buildGoModule rec {
   src = fetchFromGitHub {
     owner = "pb33f";
     repo = "openapi-changes";
-    rev = "v${version}";
+    rev = "24cdab383715d42431a50db602727189b70027df";
     sha256 = "sha256-5RPJVZR2TwF0TYbALEdZ0CbmEsPE3i2Udu7wsyCU1Q0=";
   };
 
