@@ -20,6 +20,7 @@
       reposync = prev.callPackage ./pkgs/reposync {};
       driveguard = prev.callPackage ./pkgs/driveguard {};
       clipboard-sync = prev.callPackage ./pkgs/clipboard-sync {};
+      primecodegen = prev.callPackage ./pkgs/primelib/primecodegen {};
       openapi-changes = prev.callPackage ./pkgs/pb33f/openapi-changes {};
       vacuum = prev.callPackage ./pkgs/pb33f/vacuum {};
     };
