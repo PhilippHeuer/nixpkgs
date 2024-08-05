@@ -7,15 +7,15 @@
 
 buildGoModule rec {
   pname = "dotfiles-cli";
-  version = "v0.2.5";
+  version = "v0.2.6";
 
   src = fetchFromGitHub {
     owner = "PhilippHeuer";
     repo = "dotfiles-cli";
     rev = version;
-    sha256 = "sha256-sOHClDmgJ4BcxuLy0bfQOusimZDL710WEeiQsVBYGvc=";
+    sha256 = "sha256-br88GNTJIEzChDXLvAOkXcsZUXH1t8j//XLeViW3lls=";
   };
-  vendorHash = "sha256-u74jsASFAPbk7ZnMj57vLWJ2tI1mNQMI3Fc9xiLEE20=";
+  vendorHash = "sha256-X/u9cVqmEAyZ88R93EvzIDOPCdF6uuYetJPRJjlmJmI=";
 
   ldflags = [
     "-s"
