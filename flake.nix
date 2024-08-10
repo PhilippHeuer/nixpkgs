@@ -23,6 +23,7 @@
       primecodegen = prev.callPackage ./pkgs/primelib/primecodegen {};
       openapi-changes = prev.callPackage ./pkgs/pb33f/openapi-changes {};
       vacuum = prev.callPackage ./pkgs/pb33f/vacuum {};
+      waypaper = prev.callPackage ./pkgs/waypaper {};
     };
 
     packages = genSystems (system: self.overlays.default null pkgsFor.${system});
