@@ -34,6 +34,7 @@
       vacuum = nixpkgsFor.${system}.callPackage ./pkgs/pb33f/vacuum {};
       waypaper = nixpkgsFor.${system}.callPackage ./pkgs/waypaper {};
       loungy = nixpkgsFor.${system}.callPackage ./pkgs/matthiasgrandl/loungy {};
+      wallpapers = nixpkgsFor.${system}.callPackage ./pkgs/wallpapers {};
     });
   };
 }
