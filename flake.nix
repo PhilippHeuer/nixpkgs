@@ -7,25 +7,33 @@
     self,
     nixpkgs,
   }: let
-    genSystems = nixpkgs.lib.genAttrs [
+    # System types to support.
+    supportedSystems = [
       "x86_64-linux"
       "aarch64-linux"
     ];
+
+    # Convert supported systems into a attribute set.
+    forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
+
+    # Instantiate Nixpkgs for all supported systems.
+    nixpkgsFor = forAllSystems (system: import nixpkgs { inherit system; });
+    
     pkgsFor = nixpkgs.legacyPackages;
   in {
-    overlays.default = _: prev: {
-      cid = prev.callPackage ./pkgs/cid {};
-      dotfiles = prev.callPackage ./pkgs/dotfiles {};
-      fuzzmux = prev.callPackage ./pkgs/fuzzmux {};
-      reposync = prev.callPackage ./pkgs/reposync {};
-      driveguard = prev.callPackage ./pkgs/driveguard {};
-      clipboard-sync = prev.callPackage ./pkgs/clipboard-sync {};
-      primecodegen = prev.callPackage ./pkgs/primelib/primecodegen {};
-      openapi-changes = prev.callPackage ./pkgs/pb33f/openapi-changes {};
-      vacuum = prev.callPackage ./pkgs/pb33f/vacuum {};
-      waypaper = prev.callPackage ./pkgs/waypaper {};
-    };
-
-    packages = genSystems (system: self.overlays.default null pkgsFor.${system});
+    # Provide some binary packages for selected system types.
+    packages = forAllSystems (system: {
+      cid = nixpkgsFor.${system}.callPackage ./pkgs/cid {};
+      dotfiles = nixpkgsFor.${system}.callPackage ./pkgs/dotfiles {};
+      fuzzmux = nixpkgsFor.${system}.callPackage ./pkgs/fuzzmux {};
+      reposync = nixpkgsFor.${system}.callPackage ./pkgs/reposync {};
+      driveguard = nixpkgsFor.${system}.callPackage ./pkgs/driveguard {};
+      clipboard-sync = nixpkgsFor.${system}.callPackage ./pkgs/clipboard-sync {};
+      primecodegen = nixpkgsFor.${system}.callPackage ./pkgs/primelib/primecodegen {};
+      openapi-changes = nixpkgsFor.${system}.callPackage ./pkgs/pb33f/openapi-changes {};
+      vacuum = nixpkgsFor.${system}.callPackage ./pkgs/pb33f/vacuum {};
+      waypaper = nixpkgsFor.${system}.callPackage ./pkgs/waypaper {};
+      loungy = nixpkgsFor.${system}.callPackage ./pkgs/matthiasgrandl/loungy {};
+    });
   };
 }
