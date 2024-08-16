@@ -7,15 +7,15 @@
 
 buildGoModule rec {
   pname = "fuzzmux";
-  version = "v0.6.1";
+  version = "v0.7.0";
 
   src = fetchFromGitHub {
     owner = "PhilippHeuer";
     repo = "fuzzmux";
     rev = version;
-    sha256 = "sha256-ES57cFj6pS40kfUxVYbsvLgMxm6HhBFR/ttlTu6RetQ=";
+    sha256 = "sha256-9Qk4SUHmxXiJ8Vy2CDToDeVLnFvaWAtwNFi0cJXPU8c=";
   };
-  vendorHash = "sha256-n/xbqgw1eQKRmaaj1AveGQMNvq/l7B/dY3GItlpyHNY=";
+  vendorHash = "sha256-tAWjYuBVO9ux2nnHwNPZoDr9Mx9a7YfqOBgJK12IdYI=";
 
   ldflags = [
     "-s"
