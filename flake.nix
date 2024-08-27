@@ -32,6 +32,7 @@
       primecodegen = nixpkgsFor.${system}.callPackage ./pkgs/primelib/primecodegen {};
       openapi-changes = nixpkgsFor.${system}.callPackage ./pkgs/pb33f/openapi-changes {};
       vacuum = nixpkgsFor.${system}.callPackage ./pkgs/pb33f/vacuum {};
+      gocheat = nixpkgsFor.${system}.callPackage ./pkgs/gocheat {};
       waypaper = nixpkgsFor.${system}.callPackage ./pkgs/waypaper {};
       loungy = nixpkgsFor.${system}.callPackage ./pkgs/matthiasgrandl/loungy {};
       wallpapers = nixpkgsFor.${system}.callPackage ./pkgs/wallpapers {};
