@@ -13,8 +13,8 @@ python3.pkgs.buildPythonApplication rec {
   src = fetchFromGitHub {
     owner = "philippheuer";
     repo = "waypaper";
-    rev = "e170130e4a14b32d1b8560c1c0746ce847ecb7da";
-    hash = "sha256-jzbAsGYKh3jaMQ6nY+sLrPc1GQDRCBY/qFHQf9KvjX8=";
+    rev = "9450456283911babb87c03d34493803f21a1559d";
+    hash = "sha256-Jpwu6AwyHenRfQ9ysp3Zu7npVu6yCdnngFY7H732y10=";
   };
 
   nativeBuildInputs = [
