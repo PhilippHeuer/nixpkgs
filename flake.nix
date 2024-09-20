@@ -34,6 +34,7 @@
       vacuum = nixpkgsFor.${system}.callPackage ./pkgs/pb33f/vacuum {};
       gocheat = nixpkgsFor.${system}.callPackage ./pkgs/gocheat {};
       waypaper = nixpkgsFor.${system}.callPackage ./pkgs/waypaper {};
+      vault-token-helper = nixpkgsFor.${system}.callPackage ./pkgs/vault-token-helper {};
       loungy = nixpkgsFor.${system}.callPackage ./pkgs/matthiasgrandl/loungy {};
       wallpapers = nixpkgsFor.${system}.callPackage ./pkgs/wallpapers {};
     });
