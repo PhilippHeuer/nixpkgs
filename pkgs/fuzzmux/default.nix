@@ -13,10 +13,10 @@ buildGo123Module rec {
   src = fetchFromGitHub {
     owner = "PhilippHeuer";
     repo = "fuzzmux";
-    rev = "5698dca39e49118d6c15cd223e4c9d9ba61a5c1c";
-    sha256 = "sha256-nHXF3smeKljuakWz5gskCg1B70KpYTZXlkG38tBIPzU=";
+    rev = version;
+    sha256 = "sha256-gbQvvw96FGqHuZz8mNPRXEMchhqTK0KzV7V8QqXF9KY=";
   };
-  vendorHash = "sha256-mxsVEu8Jby9I7zTLtl33Fp8VsQBHWKMA6kC5FiQcox4=";
+  vendorHash = "sha256-wdDpaohab6OCm5yDTg5M5WyVJM/9SRSfrz3XE8AQado=";
 
   ldflags = [
     "-s"
@@ -52,6 +52,9 @@ buildGo123Module rec {
     description = "fuzzmux";
     license = licenses.mit;
     platforms = platforms.unix;
+    sourceProvenance = with sourceTypes; [
+      fromSource
+    ];
     maintainers = with maintainers; [ ];
     mainProgram = "tmx";
   };
