@@ -4,7 +4,6 @@
   installShellFiles,
   openjdk21,
   stripJavaArchivesHook,
-  makeBinaryWrapper,
   fetchzip,
 }:
 
@@ -14,7 +13,7 @@ let
 
   src = fetchzip {
     url = "https://github.com/rundeck/rundeck-cli/releases/download/v${version}/rd-${version}.zip";
-    sha256 = "sha256-VsNHhNXFFmuZfKoPdFVyKHCAxUbYSBwpq7mZ1H7lCPQ=";
+    sha256 = "sha256-+yAQ+fciYUAknMyVJkqqcLh/hf8yiuczA8t7E07bPXk=";
     stripRoot = true;
   };
 
@@ -24,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     openjdk21
-    makeBinaryWrapper
     installShellFiles
     stripJavaArchivesHook
   ];
@@ -33,7 +31,8 @@ stdenv.mkDerivation (finalAttrs: {
     runHook preInstall
 
     mkdir -p $out/
-    cp -R $src/rd-${version}/* $out/
+    cp -R $src/bin $out/bin
+    cp -R $src/lib $out/lib
 
     runHook postInstall
   '';
