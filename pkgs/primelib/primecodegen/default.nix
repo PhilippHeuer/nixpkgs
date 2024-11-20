@@ -6,6 +6,7 @@
 }:
 
 buildGoModule rec {
+  # renovate: datasource=github-releases depName=primelib/primecodegen-cli
   pname = "primecodegen";
   version = "v0.0.3";
 
@@ -36,10 +37,10 @@ buildGoModule rec {
   # completions
   postInstall = ''
       # install shell completion
-      installShellCompletion --cmd primecodegen-cli \
-        --bash <($out/bin/primecodegen-cli completion bash) \
-        --fish <($out/bin/primecodegen-cli completion fish) \
-        --zsh  <($out/bin/primecodegen-cli completion zsh)
+      installShellCompletion --cmd primecodegen \
+        --bash <($out/bin/primecodegen completion bash) \
+        --fish <($out/bin/primecodegen completion fish) \
+        --zsh  <($out/bin/primecodegen completion zsh)
     '';
 
   # metadata
