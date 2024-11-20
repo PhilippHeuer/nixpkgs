@@ -5,13 +5,14 @@
 }:
 
 buildGoModule rec {
+  # renovate: datasource=github-releases depName=daveshanley/vacuum
   pname = "vacuum";
-  version = "0.9.16";
+  version = "0.14.3";
 
   src = fetchFromGitHub {
     owner = "daveshanley";
     repo = "vacuum";
-    rev = "99df10d7e2f8dd811c2f00f765ec6ef5568164fd";
+    rev = version;
     sha256 = "sha256-gMEFGbHAXUK4kh7lbiC7ecBBH8owTDzLYionMTT0UjU=";
   };
 
@@ -48,5 +49,6 @@ buildGoModule rec {
     homepage = "https://quobix.com/vacuum/";
     license = lib.licenses.mit;
     maintainers = with lib.maintainers; [];
+    mainProgram = "vacuum";
   };
 }
