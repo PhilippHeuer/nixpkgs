@@ -6,6 +6,7 @@
 }:
 
 buildGoModule rec {
+  # renovate: datasource=github-releases depName=cidverse/cid
   pname = "cid";
   version = "v0.1.0";
 

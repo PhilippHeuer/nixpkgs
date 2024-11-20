@@ -7,6 +7,7 @@
 }:
 
 buildGo123Module rec {
+  # renovate: datasource=github-releases depName=philippheuer/fuzzmux
   pname = "fuzzmux";
   version = "v0.8.1";
 
