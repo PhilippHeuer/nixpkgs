@@ -28,6 +28,7 @@
       fuzzmux = nixpkgsFor.${system}.callPackage ./pkgs/fuzzmux {};
       reposync = nixpkgsFor.${system}.callPackage ./pkgs/reposync {};
       normalizeci = nixpkgsFor.${system}.callPackage ./pkgs/normalizeci {};
+      repoanalyzer = nixpkgsFor.${system}.callPackage ./pkgs/repoanalyzer {};
       driveguard = nixpkgsFor.${system}.callPackage ./pkgs/driveguard {};
       clipboard-sync = nixpkgsFor.${system}.callPackage ./pkgs/clipboard-sync {};
       primecodegen = nixpkgsFor.${system}.callPackage ./pkgs/primelib/primecodegen {};
