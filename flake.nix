@@ -18,7 +18,7 @@
 
     # Instantiate Nixpkgs for all supported systems.
     nixpkgsFor = forAllSystems (system: import nixpkgs { inherit system; });
-    
+
     pkgsFor = nixpkgs.legacyPackages;
   in {
     # Provide some binary packages for selected system types.
@@ -27,6 +27,7 @@
       dotfiles = nixpkgsFor.${system}.callPackage ./pkgs/dotfiles {};
       fuzzmux = nixpkgsFor.${system}.callPackage ./pkgs/fuzzmux {};
       reposync = nixpkgsFor.${system}.callPackage ./pkgs/reposync {};
+      normalizeci = nixpkgsFor.${system}.callPackage ./pkgs/normalizeci {};
       driveguard = nixpkgsFor.${system}.callPackage ./pkgs/driveguard {};
       clipboard-sync = nixpkgsFor.${system}.callPackage ./pkgs/clipboard-sync {};
       primecodegen = nixpkgsFor.${system}.callPackage ./pkgs/primelib/primecodegen {};
