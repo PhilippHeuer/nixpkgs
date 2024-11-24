@@ -8,15 +8,15 @@
 buildGoModule rec {
   # renovate: datasource=github-releases depName=cidverse/cid
   pname = "cid";
-  version = "v0.1.0";
+  version = "v0.5.0";
 
   src = fetchFromGitHub {
     owner = "cidverse";
     repo = "cid";
-    rev = "71574ddd6cd05f7b9592706642f931d262f9121c"; # version
-    sha256 = "sha256-1ZZpqCYvzu+8EPFVu9KtZaprz2p183EuNxBjp2zR2RM=";
+    rev = "6d228fba2daf8addcfbf24452ab1e260b9d3014b"; # version
+    sha256 = "sha256-wHHoQCXJbHBrUcYbT7ih0cPvlCUKgsBWW6+rVuija0E=";
   };
-  vendorHash = "sha256-51MQSEz1YcO5079wH7d22SG16+XQQkdi3e/EKYhzf2g=";
+  vendorHash = "sha256-vDz3uMPU1ExkI78scsgihEUSEbgns6JPFOOmbmCcoEQ=";
 
   ldflags = [
     "-s"
