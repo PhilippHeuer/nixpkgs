@@ -6,7 +6,7 @@
 
 buildGoModule rec {
   pname = "openapi-changes";
-  version = "0.0.62";
+  version = "v0.0.62";
 
   src = fetchFromGitHub {
     owner = "pb33f";
