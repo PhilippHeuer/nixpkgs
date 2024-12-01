@@ -5,18 +5,18 @@
 
 buildGoModule rec {
   pname = "driveguard";
-  version = "v0.1.1";
+  version = "v0.1.2";
 
   src = fetchFromGitHub {
     owner = "PhilippHeuer";
     repo = "driveguard";
-    rev = "120973cef313eb7523d24d9dad9b8606bef2fa6b";
-    sha256 = "sha256-1npjuMnpBQHk/7RTKwyOW/RyS9tq0XOPSctDUZh8WG8=";
+    rev = "115a7678284bb915d1ab36ab8b34b2327ee2e0a4";
+    sha256 = "sha256-tmRuGYIhNMLRwnqCifUh4hXR0qwTr+58SyzAnK1m4Dk=";
     private = true;
     forceFetchGit = true;
   };
 
-  vendorHash = "sha256-Gi3oYoxvQPfO7fTEWU4bYQX5pftPorb+1W5Sqi2ahFA=";
+  vendorHash = "sha256-eEq7jNMtkbr7hKF3tAmj/7O8hR0ALQDL1i5q+r920Cg=";
 
   ldflags = [
     "-s"
