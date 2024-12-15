@@ -1,21 +1,22 @@
-{ lib
-, buildGoModule
-, fetchFromGitHub
-, installShellFiles
+{
+  lib,
+  buildGoModule,
+  fetchFromGitHub,
+  installShellFiles,
 }:
 
 buildGoModule rec {
   pname = "openapi-changes";
-  version = "v0.0.62";
+  version = "v0.0.69";
 
   src = fetchFromGitHub {
     owner = "pb33f";
     repo = "openapi-changes";
-    rev = "24cdab383715d42431a50db602727189b70027df";
-    sha256 = "sha256-5RPJVZR2TwF0TYbALEdZ0CbmEsPE3i2Udu7wsyCU1Q0=";
+    rev = version;
+    sha256 = "sha256-cCLIuS3dkC11mO1zwbGuPiMvwCVuU213OkGURgOiJqU=";
   };
 
-  vendorHash = "sha256-zcglAMAqLfDmv8Ymrs7elIA7I6/HL4qp630QfUU1iw0=";
+  vendorHash = "sha256-IiI+mSbJNEpM6rryGtAnGSOcY2RXnvqXTZmZ82L1HPc=";
 
   doCheck = false;
 
@@ -47,6 +48,6 @@ buildGoModule rec {
     '';
     homepage = "https://pb33f.io/openapi-changes/";
     license = lib.licenses.gpl3;
-    maintainers = with lib.maintainers; [];
+    maintainers = with lib.maintainers; [ ];
   };
 }
