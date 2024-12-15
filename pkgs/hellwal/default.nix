@@ -13,7 +13,7 @@ stdenv.mkDerivation rec {
     owner = "danihek";
     repo = "hellwal";
     rev = "v${version}";
-    sha256 = "sha256-7+KjOSPgbVnIWHw4uJwgurfv6RODM25OPMeqCAOJ2SI=";
+    sha256 = "sha256-TrqXInoz6OEtS12YmXUILV41IkZW0B4XAAESiU2yMMU=";
   };
 
   buildInputs = [ ];
@@ -21,7 +21,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ stdenv.cc ];
 
   postPatch = ''
-    rm -f "${src}/hellwal"
+    rm -f "hellwal"
   '';
 
   installPhase = ''
