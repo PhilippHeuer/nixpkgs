@@ -8,15 +8,15 @@
 buildGoModule rec {
   # renovate: datasource=github-releases depName=cidverse/reposync
   pname = "reposync";
-  version = "v0.4.3";
+  version = "v0.5.0";
 
   src = fetchFromGitHub {
     owner = "cidverse";
     repo = "reposync";
     rev = version;
-    sha256 = "sha256-DwS1obr8bbPEXpaHSNlJCx4+xUxb3Yvj7L0NAav/d0E=";
+    sha256 = "sha256-xdwddPjK2eFd5g9YVDDb6v1ZhZxGWGkT1j/da0AxHx8=";
   };
-  vendorHash = "sha256-4MTjfaF45nvRBU/j4jw/jWuOcXnUYtYi5LLsxic5HP8=";
+  vendorHash = "sha256-o71kSNakIU/2Oys1za6hcpYOXh99CzyU5mwNAYSR3ms=";
 
   ldflags = [
     "-s"
