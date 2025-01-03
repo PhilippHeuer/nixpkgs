@@ -52,6 +52,10 @@ _build your package locally_
 
 `nix build .#reposync`
 
+## Credits
+
+- [nur-packages-template](https://github.com/nix-community/nur-packages-template/tree/master)
+
 ## License
 
 Released under the [MIT license](./LICENSE).
