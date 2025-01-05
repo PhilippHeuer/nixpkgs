@@ -1,5 +1,4 @@
-{
-  lib,
+{ lib,
   stdenv,
   jdk21_headless,
   stripJavaArchivesHook,
@@ -7,12 +6,12 @@
 }:
 
 let
-  pname = "rundeck-cli";
-  version = "2.0.8";
+  pname = "sonar-scanner-cli";
+  version = "6.2.1.4610";
 
   src = fetchzip {
-    url = "https://github.com/rundeck/rundeck-cli/releases/download/v${version}/rd-${version}.zip";
-    sha256 = "sha256-+yAQ+fciYUAknMyVJkqqcLh/hf8yiuczA8t7E07bPXk=";
+    url = "https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${version}.zip";
+    sha256 = "sha256-WNShu9GyUNcgeawyN2bFUVIDHh5ov+LxO8e8ZpoU3rg=";
     stripRoot = true;
   };
 
@@ -29,22 +28,21 @@ stdenv.mkDerivation (finalAttrs: {
     runHook preInstall
 
     mkdir -p $out/
-    cp -R $src/bin $out/bin
-    cp -R $src/lib $out/lib
+    cp -R $src/* $out/
 
     runHook postInstall
   '';
 
-  # disable checks
+  # Disable checks
   doCheck = false;
 
-  # metadata
+  # Metadata
   meta = with lib; {
-    homepage = "https://github.com/rundeck/rundeck-cli";
-    description = "CLI tool for Rundeck";
-    license = licenses.mit;
+    homepage = "https://www.sonarqube.org/";
+    description = "SonarScanner CLI tool for SonarQube";
+    #license = licenses.unfree;
     platforms = jdk.meta.platforms;
     maintainers = with maintainers; [ ];
-    mainProgram = "rd";
+    mainProgram = "sonar-scanner";
   };
 })
