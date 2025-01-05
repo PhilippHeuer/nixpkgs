@@ -9,6 +9,7 @@
   overlays = import ./overlays; # nixpkgs overlays
 
   # Packages
+  appinspector = pkgs.callPackage ./pkgs/appinspector { };
   cid = pkgs.callPackage ./pkgs/cid { };
   dotfiles = pkgs.callPackage ./pkgs/dotfiles { };
   fuzzmux = pkgs.callPackage ./pkgs/fuzzmux { };
