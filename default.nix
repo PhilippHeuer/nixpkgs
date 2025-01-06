@@ -27,4 +27,5 @@
   waypaper = pkgs.callPackage ./pkgs/waypaper { };
   wallpapers = pkgs.callPackage ./pkgs/wallpapers { };
   hellwal = pkgs.callPackage ./pkgs/hellwal { };
+  fossa-cli = pkgs.callPackage ./pkgs/fossa-cli { };
 }
