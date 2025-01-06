@@ -10,7 +10,7 @@ buildDotnetGlobalTool {
   meta = {
     description = "A source code analyzer built for surfacing features of interest and other characteristics to answer the question 'What's in the code?' quickly using static analysis with a json based rules engine.";
     license = lib.licenses.mit;
-    maintainers = with lib.maintainers; [];
+    maintainers = with lib.maintainers; [ ];
     mainProgram = "appinspector";
   };
 }
