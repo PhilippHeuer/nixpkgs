@@ -17,7 +17,7 @@ in
 stdenv.mkDerivation {
   inherit pname version src;
 
-  nativeBuildInputs = [];
+  nativeBuildInputs = [ ];
 
   installPhase = ''
     runHook preInstall
