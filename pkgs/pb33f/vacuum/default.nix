@@ -14,7 +14,7 @@ buildGoModule rec {
     owner = "daveshanley";
     repo = "vacuum";
     rev = "refs/tags/v${version}";
-    sha256 = "sha256-x3AYHFQFS8PGv5bi+zg4rut7gVgQi9PS3+0YGJ47YMQ=";
+    sha256 = "sha256-wlxEKAP8A8T+rBQ2HqoOdBlkqFBqrIxuuEidPAeUO3E=";
   };
 
   vendorHash = "sha256-1lr1VQU4JHg0PZbjAUmALFZJiYc+HTwrk0E/t/1qXqE=";
