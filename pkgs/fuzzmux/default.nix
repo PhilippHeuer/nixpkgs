@@ -9,15 +9,15 @@
 buildGo123Module rec {
   # renovate: datasource=github-releases depName=philippheuer/fuzzmux
   pname = "fuzzmux";
-  version = "v0.9.0";
+  version = "v0.10.0";
 
   src = fetchFromGitHub {
     owner = "PhilippHeuer";
     repo = "fuzzmux";
     rev = version;
-    sha256 = "sha256-I5bN+3ntbYfhJLqWryOgmZyUnXpHaxDhIKR4hx/7rBk=";
+    sha256 = "sha256-LNtp30UYHe9d2SK+GriSRZ97DqeQZBiiFO2s6+QaQkc=";
   };
-  vendorHash = "sha256-Wr7mevGeaH3+hZLVfCW93DTNKDOmvcr5u4NIRLe3UHI=";
+  vendorHash = "sha256-S2PB8+xaqVliNXJaGcflXEZK529WHaqwVEDl6MCM6xY=";
 
   ldflags = [
     "-s"
