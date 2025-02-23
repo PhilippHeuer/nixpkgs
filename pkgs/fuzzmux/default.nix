@@ -9,13 +9,13 @@
 buildGo123Module rec {
   # renovate: datasource=github-releases depName=philippheuer/fuzzmux
   pname = "fuzzmux";
-  version = "v0.10.0";
+  version = "v0.10.1";
 
   src = fetchFromGitHub {
     owner = "PhilippHeuer";
     repo = "fuzzmux";
     rev = version;
-    sha256 = "sha256-LNtp30UYHe9d2SK+GriSRZ97DqeQZBiiFO2s6+QaQkc=";
+    sha256 = "sha256-gtLUXo+jmlTbWfgO/HkFaG3cbADVOmHgVrQUkxlrhUo=";
   };
   vendorHash = "sha256-S2PB8+xaqVliNXJaGcflXEZK529WHaqwVEDl6MCM6xY=";
 
