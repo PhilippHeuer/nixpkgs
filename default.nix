@@ -29,4 +29,5 @@
   hellwal = pkgs.callPackage ./pkgs/hellwal { };
   fossa-cli = pkgs.callPackage ./pkgs/fossa-cli { };
   sarifrs = pkgs.callPackage ./pkgs/sarifrs { };
+  cryptomator-cli = pkgs.callPackage ./pkgs/cryptomator-cli { };
 }
