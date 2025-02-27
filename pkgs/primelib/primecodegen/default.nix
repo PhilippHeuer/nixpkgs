@@ -13,10 +13,10 @@ buildGoModule rec {
   src = fetchFromGitHub {
     owner = "primelib";
     repo = "primecodegen-cli";
-    rev = "2f3c71f107306111fd41605f8b1e68afcf8eb21c"; # version
-    sha256 = "sha256-3TDtvXS/ATpqANl60+evtqcp8gODnB8d60KCb6DMiys=";
+    rev = "076fc08445d9a72acfb296c5f535b12170132b49"; # version
+    sha256 = "sha256-JecHm/TU9nzRS/b9MAK/+6kU+mlGe7E+crzsYoi6oho=";
   };
-  vendorHash = "sha256-32kR6hkb588zA52bwBsjek2/YESJgKKVm2bOgkVr/fU=";
+  vendorHash = "sha256-3RTkUkkzWv80dw+c285Bn5t2hGLLT2n2pZnyWrYmpao=";
 
   ldflags = [
     "-s"
