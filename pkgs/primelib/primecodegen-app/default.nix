@@ -7,16 +7,16 @@
 
 buildGoModule rec {
   # renovate: datasource=github-releases depName=primelib/primecodegen-cli
-  pname = "primecodegen";
+  pname = "primecodegen-app";
   version = "v0.1.0";
 
   src = fetchFromGitHub {
     owner = "primelib";
-    repo = "primecodegen-cli";
-    rev = "ef1ab707f308821414e3b0b06b6e5aff3d03683a"; # version
-    sha256 = "sha256-z41Auv8ho6VlESnTy2uEnli1R+SBxgmoKabH0zMCS8Y=";
+    repo = "primecodegen-app";
+    rev = "f7cd66a854b6d5526c9f81ac01c8454c9fc52225"; # version
+    sha256 = "sha256-xYCQERGNKCUc/50dMfZBGMJY66Bc+k/GhM4OSYIFb+k=";
   };
-  vendorHash = "sha256-3RTkUkkzWv80dw+c285Bn5t2hGLLT2n2pZnyWrYmpao=";
+  vendorHash = "sha256-076atOSkRxPoDpsu+6ug+k35SB5wPvsyPxa4di9A2mM=";
 
   ldflags = [
     "-s"
@@ -37,10 +37,10 @@ buildGoModule rec {
   # completions
   postInstall = ''
       # install shell completion
-      installShellCompletion --cmd primecodegen \
-        --bash <($out/bin/primecodegen completion bash) \
-        --fish <($out/bin/primecodegen completion fish) \
-        --zsh  <($out/bin/primecodegen completion zsh)
+      installShellCompletion --cmd primecodegen-app \
+        --bash <($out/bin/primecodegen-app completion bash) \
+        --fish <($out/bin/primecodegen-app completion fish) \
+        --zsh  <($out/bin/primecodegen-app completion zsh)
     '';
 
   # metadata
@@ -50,6 +50,6 @@ buildGoModule rec {
     license = licenses.mit;
     platforms = platforms.unix;
     maintainers = with maintainers; [ ];
-    mainProgram = "primecodegen";
+    mainProgram = "primecodegen-app";
   };
 }
