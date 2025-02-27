@@ -20,6 +20,7 @@
   clipboard-sync = pkgs.callPackage ./pkgs/clipboard-sync { };
   sonarscanner-cli = pkgs.callPackage ./pkgs/sonarscanner-cli { };
   primecodegen = pkgs.callPackage ./pkgs/primelib/primecodegen { };
+  primecodegen-app = pkgs.callPackage ./pkgs/primelib/primecodegen-app { };
   openapi-changes = pkgs.callPackage ./pkgs/pb33f/openapi-changes { };
   vacuum = pkgs.callPackage ./pkgs/pb33f/vacuum { };
   rundeck-cli = pkgs.callPackage ./pkgs/rundeck-cli { };
