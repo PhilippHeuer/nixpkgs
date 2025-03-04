@@ -31,4 +31,6 @@
   fossa-cli = pkgs.callPackage ./pkgs/fossa-cli { };
   sarifrs = pkgs.callPackage ./pkgs/sarifrs { };
   cryptomator-cli = pkgs.callPackage ./pkgs/cryptomator-cli { };
+  goland-eap = pkgs.callPackage ./pkgs/jetbrains/goland-eap { };
+  idea-ultimate-eap = pkgs.callPackage ./pkgs/jetbrains/idea-ultimate-eap { };
 }
