@@ -10,7 +10,7 @@ let
 
   src = fetchzip {
     url = "https://github.com/cryptomator/cli/releases/download/${version}/cryptomator-cli-${version}-linux-x64.zip";
-    sha256 = "sha256-0GQfUXbiXSBLYtbDmWPJSmV7oo8D456ZDgPXc7Kgdcg=";
+    sha256 = "sha256-AEAJKBMzBv3NhowGRahTpc5zbaDWafzrnyCCr0lZLg8=";
     stripRoot = true;
   };
 in
@@ -23,8 +23,8 @@ stdenv.mkDerivation {
     runHook preInstall
 
     mkdir -p $out/bin $out/lib
-    cp -R cryptomator-cli/bin/* $out/bin
-    cp -R cryptomator-cli/lib/* $out/lib
+    cp -R bin/ $out
+    cp -R lib $out
     chmod +x $out/bin/cryptomator-cli
 
     runHook postInstall
