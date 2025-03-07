@@ -6,11 +6,11 @@
 
 let
   pname = "speakeasy";
-  version = "1.509.1";
+  version = "1.513.3";
 
   src = fetchzip {
     url = "https://github.com/speakeasy-api/speakeasy/releases/download/v${version}/speakeasy_linux_amd64.zip";
-    sha256 = "sha256-pCBHQfwoJxJ4dNULABYgnh6jg19FS8v7E4MeNeJDZ7g=";
+    sha256 = "sha256-ZCQ4FxiASYqtZbFg/aMHyY+sc4V5ekRLxmAkX+B2Vdc=";
     stripRoot = false;
   };
 in
