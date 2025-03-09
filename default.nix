@@ -34,4 +34,5 @@
   speakeasy = pkgs.callPackage ./pkgs/speakeasy { };
   goland-eap = pkgs.callPackage ./pkgs/jetbrains/goland-eap { };
   idea-ultimate-eap = pkgs.callPackage ./pkgs/jetbrains/idea-ultimate-eap { };
+  rider-eap = pkgs.callPackage ./pkgs/jetbrains/rider-eap { };
 }
