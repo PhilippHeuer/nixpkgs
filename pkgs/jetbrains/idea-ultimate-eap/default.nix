@@ -3,10 +3,10 @@
 }:
 
 (pkgs.jetbrains.idea-ultimate.overrideAttrs {
-    version = "2025.1 EAP";
+    version = "2025.1 Beta";
     src = pkgs.fetchurl {
-        url = "https://download-cdn.jetbrains.com/idea/ideaIU-251.23536.34.tar.gz";
-        sha256 = "14f844e54c97a1b401ba15de078a54bc1d4e5ebf408dc67e352aee6ce235933f";
+        url = "https://download-cdn.jetbrains.com/idea/ideaIU-251.23774.16.tar.gz";
+        sha256 = "8ad3410cb3865976bead7e4a1f82e25b96cf32d71b1a570965e3d1d293933196";
     };
-    build_number = "251.23536.34";
+    build_number = "251.23774.16";
 })
