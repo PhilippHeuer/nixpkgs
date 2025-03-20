@@ -7,13 +7,13 @@
 stdenv.mkDerivation rec {
   # renovate: datasource=github-releases depName=danihek/hellwal
   pname = "hellwal";
-  version = "1.0.2";
+  version = "1.0.3";
 
   src = fetchFromGitHub {
     owner = "danihek";
     repo = "hellwal";
     rev = "v${version}";
-    sha256 = "sha256-TrqXInoz6OEtS12YmXUILV41IkZW0B4XAAESiU2yMMU=";
+    sha256 = "sha256-ei612uqAdEDwodsVDkmI4CGASMzCC/q0+CuNS54B53U=";
   };
 
   buildInputs = [ ];
