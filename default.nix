@@ -36,4 +36,5 @@
   idea-ultimate-eap = pkgs.callPackage ./pkgs/jetbrains/idea-ultimate-eap { };
   rider-eap = pkgs.callPackage ./pkgs/jetbrains/rider-eap { };
   qodana = pkgs.callPackage ./pkgs/jetbrains/qodana { };
+  gitlab-sarif-converter = pkgs.callPackage ./pkgs/gitlab-sarif-converter { };
 }
