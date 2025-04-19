@@ -9,7 +9,7 @@
 buildGo123Module rec {
   # renovate: datasource=gitlab-tags depName=ignis-build/sarif-converter
   pname = "gitlab-sarif-converter";
-  version = "v0.9.4";
+  version = "0.9.4";
 
   src = fetchFromGitLab {
     owner = "ignis-build";
