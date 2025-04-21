@@ -35,12 +35,6 @@ buildGo123Module rec {
   # disable checks
   doCheck = false;
 
-  # completions
-  postInstall = ''
-      # rename binary
-      mv $out/bin/* $out/bin/gocover-cobertura
-    '';
-
   # metadata
   meta = with lib; {
     homepage = "https://github.com/boumenot/gocover-cobertura";
