@@ -38,7 +38,7 @@ buildGo123Module rec {
   # completions
   postInstall = ''
       # rename binary
-      mv $out/bin/* $out/bin/gitlab-sarif-converter
+      mv $out/bin/* $out/bin/gocover-cobertura
     '';
 
   # metadata
