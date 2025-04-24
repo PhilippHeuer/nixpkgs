@@ -12,7 +12,7 @@ let
 
   src = fetchTarball {
     url = "https://github.com/JetBrains/qodana-cli/releases/download/v${version}/qodana_linux_x86_64.tar.gz";
-    sha256 = "sha256:02hi713g713xpayv5q7jihh1ljhzv55zmskj41zk2mxzs2xb6w8x";
+    sha256 = "sha256:19w23x0hm7slla1bs81f6cs95czi2jqfs38q3z83jybgfp1nmf93";
   };
 in
 stdenv.mkDerivation {
