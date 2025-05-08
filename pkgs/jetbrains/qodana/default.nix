@@ -8,11 +8,11 @@
 let
   # renovate: datasource=github-releases depName=JetBrains/qodana-cli
   pname = "qodana";
-  version = "2025.1.0";
+  version = "2025.1.1";
 
   src = fetchTarball {
     url = "https://github.com/JetBrains/qodana-cli/releases/download/v${version}/qodana_linux_x86_64.tar.gz";
-    sha256 = "sha256:19w23x0hm7slla1bs81f6cs95czi2jqfs38q3z83jybgfp1nmf93";
+    sha256 = "sha256:0phsm2my9qi7xh6hvfpy1qqcvmdrkbd923vph3i6nmbvbv28gpnh";
   };
 in
 stdenv.mkDerivation {
