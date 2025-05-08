@@ -7,7 +7,7 @@
 stdenv.mkDerivation rec {
   # renovate: datasource=github-releases depName=danihek/hellwal
   pname = "hellwal";
-  version = "1.0.3";
+  version = "1.0.4";
 
   src = fetchFromGitHub {
     owner = "danihek";
