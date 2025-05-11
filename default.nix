@@ -38,4 +38,5 @@
   qodana = pkgs.callPackage ./pkgs/jetbrains/qodana { };
   gitlab-sarif-converter = pkgs.callPackage ./pkgs/gitlab-sarif-converter { };
   gocover-cobertura = pkgs.callPackage ./pkgs/gocover-cobertura { };
+  krakend-ce = pkgs.callPackage ./pkgs/krakend-ce{ };
 }
