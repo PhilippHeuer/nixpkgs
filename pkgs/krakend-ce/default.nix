@@ -3,7 +3,6 @@
   lib,
   buildGo124Module,
   fetchFromGitHub,
-  installShellFiles,
 }:
 
 buildGo124Module rec {
@@ -25,21 +24,13 @@ buildGo124Module rec {
   subPackages = [ "./cmd/krakend-ce" ];
 
   ldflags = [
-    "-w"
     "-X github.com/krakendio/krakend-ce/v2/pkg.Version=${version}"
     "-X github.com/luraproject/lura/v2/core.GlibcVersion=${stdenv.cc.libc.version}"
     "-X github.com/luraproject/lura/v2/core.KrakendVersion=${version}"
   ];
 
-  nativeBuildInputs = [ installShellFiles ];
-
   postInstall = ''
     mv $out/bin/* $out/bin/krakend
-
-    installShellCompletion --cmd krakend \
-      --bash <($out/bin/krakend completion bash) \
-      --fish <($out/bin/krakend completion fish) \
-      --zsh <($out/bin/krakend completion zsh)
   '';
 
   meta = with lib; {
