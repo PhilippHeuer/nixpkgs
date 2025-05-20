@@ -3,10 +3,10 @@
 }:
 
 (pkgs.jetbrains.goland.overrideAttrs {
-    version = "2025.1 Beta";
+    version = "2025.2 eap";
     src = pkgs.fetchurl {
-        url = "https://download-cdn.jetbrains.com/go/goland-251.23774.216.tar.gz";
-        sha256 = "9c74be72b091a866d35b3561f697c4161750dee8350e7b2f3563b6012c9333d0";
+        url = "https://download-cdn.jetbrains.com/go/goland-252.13776.68.tar.gz";
+        sha256 = "8c8d2653020b36ebb115799c92915b4a1f69c6529f0ccf5078e0f9074a0215d6";
     };
-    build_number = "251.23774.216";
+    build_number = "252.13776.68";
 })
