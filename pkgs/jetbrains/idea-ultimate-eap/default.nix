@@ -2,11 +2,17 @@
   pkgs,
 }:
 
-(pkgs.jetbrains.idea-ultimate.overrideAttrs {
-    version = "2025.1 Beta";
+(pkgs.jetbrains.idea-ultimate.overrideAttrs(oldAttrs: {
+    version = "2025.2 Beta";
     src = pkgs.fetchurl {
-        url = "https://download-cdn.jetbrains.com/idea/ideaIU-251.23774.200.tar.gz";
-        sha256 = "7ce57055e3a5ee92582eb90c2dea469b48a6e7165e74fe085ef1923c16ba7faa";
+        url = "https://download-cdn.jetbrains.com/idea/ideaIU-252.13776.59.tar.gz";
+        sha256 = "862e7d15b0f8cbd752f969684885a47ffb1e32a2c495089176af92d12164ecad";
     };
-    build_number = "251.23774.200";
-})
+    build_number = "252.13776.59";
+
+    buildInputs = (oldAttrs.buildInputs or []) ++ [
+      pkgs.libGL
+      pkgs.xorg.libX11
+      pkgs.fontconfig
+    ];
+}))
