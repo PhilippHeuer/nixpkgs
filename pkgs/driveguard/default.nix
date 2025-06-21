@@ -1,22 +1,23 @@
-{ lib
-, buildGoModule
-, fetchFromGitHub
+{
+  lib,
+  buildGoModule,
+  fetchFromGitHub,
 }:
 
 buildGoModule rec {
   pname = "driveguard";
-  version = "v0.1.2";
+  version = "v0.1.3";
 
   src = fetchFromGitHub {
     owner = "PhilippHeuer";
     repo = "driveguard";
-    rev = "115a7678284bb915d1ab36ab8b34b2327ee2e0a4";
-    sha256 = "sha256-tmRuGYIhNMLRwnqCifUh4hXR0qwTr+58SyzAnK1m4Dk=";
+    rev = "657f95bec5119d115deb2b51678dcf857da299db";
+    sha256 = "sha256-0Z2qt5qihvgUFMBxLRI2e0k91CgMLK6nJN4AOzu7SbA=";
     private = true;
     forceFetchGit = true;
   };
 
-  vendorHash = "sha256-eEq7jNMtkbr7hKF3tAmj/7O8hR0ALQDL1i5q+r920Cg=";
+  vendorHash = "sha256-N16gZyV856Jhhzx6rPsSkeVQag9shSxBWZVkh4W4g0s=";
 
   ldflags = [
     "-s"
