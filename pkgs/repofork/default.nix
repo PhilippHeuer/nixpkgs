@@ -15,10 +15,10 @@ buildGo124Module rec {
   src = fetchFromGitHub {
     owner = "cidverse";
     repo = "repofork";
-    rev = "3ba9112c16400aec94de48a424a44c29aa39a947";
-    sha256 = "sha256-jVdTpBffWDr4i+toJEt2y7e+u2LgaqACln4B4PUcFgY=";
+    rev = "23240760eef7444e77fc30edd85ad367c30f6790";
+    sha256 = "sha256-Z8I100wLAsR8oPhTALWkBDnS5Hi0dISq9ZfHCHkyYPA=";
   };
-  vendorHash = "sha256-2xsMEW5hT6RXtoakC7ux4M7aRyTA8SGJZWthxMYcEB8=";
+  vendorHash = "sha256-BwTQ0GwAmApSTcsHSmjx/srfVoGV1rqV/32bKVps9qk=";
 
   ldflags = [
     "-s"
