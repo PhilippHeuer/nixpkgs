@@ -13,6 +13,7 @@
   cid = pkgs.callPackage ./pkgs/cid { };
   dotfiles = pkgs.callPackage ./pkgs/dotfiles { };
   fuzzmux = pkgs.callPackage ./pkgs/fuzzmux { };
+  repofork = pkgs.callPackage ./pkgs/repofork { };
   reposync = pkgs.callPackage ./pkgs/reposync { };
   normalizeci = pkgs.callPackage ./pkgs/normalizeci { };
   repoanalyzer = pkgs.callPackage ./pkgs/repoanalyzer { };
