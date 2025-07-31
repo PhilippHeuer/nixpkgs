@@ -8,16 +8,16 @@
 buildGo124Module rec {
   # renovate: datasource=github-releases depName=krakend/krakend-ce
   pname = "krakend-ce";
-  version = "2.10.1";
+  version = "2.10.2";
 
   src = fetchFromGitHub {
     owner = "krakend";
     repo = "krakend-ce";
     rev = "refs/tags/v${version}";
-    sha256 = "sha256-ToyauvaA1ae3Cd7oD1QZBwAe2px16THjdmCIPOTJsvA=";
+    sha256 = "sha256-Aopbdf2HT14xcVS7q+eCHqYScTcgGJuyaT4tqLEMbEU=";
   };
 
-  vendorHash = "sha256-mcvgZSNk8pP0iyGxmorMwAQ/nSnps2RELXW5HXV9Gl8=";
+  vendorHash = "sha256-mOjprJHUxDRwB58f2vvrolcnCDUg16R0CwmX7TeU9M4=";
 
   doCheck = false;
 
