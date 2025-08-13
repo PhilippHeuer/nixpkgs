@@ -9,7 +9,7 @@
 buildGo123Module rec {
   # renovate: datasource=github-releases depName=boumenot/gocover-cobertura
   pname = "gocover-cobertura";
-  version = "1.3.0";
+  version = "1.4.0";
 
   src = fetchFromGitHub {
     owner = "boumenot";
