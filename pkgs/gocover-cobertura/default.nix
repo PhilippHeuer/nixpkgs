@@ -9,13 +9,13 @@
 buildGo123Module rec {
   # renovate: datasource=github-releases depName=boumenot/gocover-cobertura
   pname = "gocover-cobertura";
-  version = "1.3.0";
+  version = "1.4.0";
 
   src = fetchFromGitHub {
     owner = "boumenot";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-nbwqfObU1tod5gWa9UbhmS6CpLLilvFyvNJ6XjeR8Qc=";
+    sha256 = "sha256-9KYNK6YV+iYB5Mmporzzw0aYTPCanvX7JALoP72dMtU=";
   };
   vendorHash = null;
 
