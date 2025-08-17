@@ -15,7 +15,7 @@ buildGo123Module rec {
     owner = "boumenot";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-nbwqfObU1tod5gWa9UbhmS6CpLLilvFyvNJ6XjeR8Qc=";
+    sha256 = "sha256-9KYNK6YV+iYB5Mmporzzw0aYTPCanvX7JALoP72dMtU=";
   };
   vendorHash = null;
 
