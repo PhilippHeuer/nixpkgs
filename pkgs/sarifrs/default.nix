@@ -7,7 +7,7 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "sarif-rs";
-  version = "v0.7.0";
+  version = "v0.8.0";
 
   src = fetchFromGitHub {
     owner = "psastras";
@@ -15,7 +15,7 @@ rustPlatform.buildRustPackage rec {
     rev = "shellcheck-sarif-" + version;
     sha256 = "sha256-x4UdeZQy0DjaIYJcNII40NHObJQ69VedgckFE7JTHGA=";
   };
-  cargoHash = "sha256-OhR1pUo8oSd8zYO/lqHTyYG24j+PA8Mkq5U2m1hfTfE=";
+  cargoHash = "sha256-cK0k7jM/s1qVtJVG6/OtNV8sLbm0y7tsRmytOZSTZXI=";
 
   # build inputs
   buildInputs = [
