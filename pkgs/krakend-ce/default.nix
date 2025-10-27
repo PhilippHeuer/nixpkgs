@@ -8,7 +8,7 @@
 buildGo124Module rec {
   # renovate: datasource=github-releases depName=krakend/krakend-ce
   pname = "krakend-ce";
-  version = "2.11.1";
+  version = "2.12.0";
 
   src = fetchFromGitHub {
     owner = "krakend";
