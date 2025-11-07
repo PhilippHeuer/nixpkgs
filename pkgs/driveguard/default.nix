@@ -11,8 +11,8 @@ buildGoModule rec {
   src = fetchFromGitHub {
     owner = "PhilippHeuer";
     repo = "driveguard";
-    rev = "d279c3bfbce3355b8be5f32b6a30330bb5013860";
-    sha256 = "sha256-MIlHkGHiGZQPKMLQG0yljm/VDEAL2N4ztI5+9pr77tU=";
+    rev = "9b88a6f2238e0ff5b18b2e47fa810bb52ed7614f";
+    sha256 = "sha256-VBiGzssjoA3dU9gd27spxwxeKzTW073nS0cw4Pa+emU=";
     private = true;
     forceFetchGit = true;
   };
