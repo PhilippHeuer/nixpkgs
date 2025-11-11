@@ -8,7 +8,7 @@
 let
   # renovate: datasource=github-releases depName=JetBrains/qodana-cli
   pname = "qodana";
-  version = "2025.1.1";
+  version = "2025.2.2";
 
   src = fetchTarball {
     url = "https://github.com/JetBrains/qodana-cli/releases/download/v${version}/qodana_linux_x86_64.tar.gz";
