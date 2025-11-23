@@ -2,42 +2,44 @@
   lib,
   buildGoModule,
   fetchFromGitHub,
+  makeWrapper,
   installShellFiles,
+  git,
+  gitUpdater,
 }:
 
 buildGoModule rec {
   pname = "openapi-changes";
-  version = "v0.0.69";
+  version = "v0.0.87";
 
   src = fetchFromGitHub {
-    owner = "pb33f";
-    repo = "openapi-changes";
+    owner = "PhilippHeuer";
+    repo = "pb33f-openapi-changes";
+    #owner = "pb33f";
+    #repo = "openapi-changes";
     rev = version;
-    sha256 = "sha256-cCLIuS3dkC11mO1zwbGuPiMvwCVuU213OkGURgOiJqU=";
+    hash = "sha256-L/vm+IrKa/MciarvgjIgDBfuDK/Fr31Xw0HIQx5oSo4=";
   };
+  vendorHash = "sha256-Ep1YhxReG7UbRM9s0KVO9LPRur2HwAwjZWNsvRQWf6U=";
 
-  vendorHash = "sha256-IiI+mSbJNEpM6rryGtAnGSOcY2RXnvqXTZmZ82L1HPc=";
+  patchPhase = ''
+    rm git/read_local_test.go
+  '';
 
-  doCheck = false;
-
-  subPackages = [ "." ];
-
-  ldflags = [
-    "-s"
-    "-w"
-    "-X main.version=${version}"
-    "-X main.commit=none"
-    "-X main.date=none"
-  ];
-
-  nativeBuildInputs = [ installShellFiles ];
+  nativeBuildInputs = [ makeWrapper installShellFiles ];
 
   postInstall = ''
     installShellCompletion --cmd openapi-changes \
       --bash <($out/bin/openapi-changes completion bash) \
       --fish <($out/bin/openapi-changes completion fish) \
       --zsh <($out/bin/openapi-changes completion zsh)
+
+      wrapProgram $out/bin/openapi-changes --prefix PATH : ${lib.makeBinPath [ git ]}
   '';
+
+  passthru.updateScript = gitUpdater {
+    rev-prefix = "v";
+  };
 
   meta = {
     description = "The world's sexiest OpenAPI diff tool.";
