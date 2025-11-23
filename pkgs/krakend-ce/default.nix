@@ -1,20 +1,21 @@
 {
   stdenv,
   lib,
-  buildGo124Module,
+  buildGoModule,
   fetchFromGitHub,
+  nix-update-script,
 }:
 
-buildGo124Module rec {
+buildGoModule rec {
   # renovate: datasource=github-releases depName=krakend/krakend-ce
   pname = "krakend-ce";
-  version = "2.11.1";
+  version = "2.12.0";
 
   src = fetchFromGitHub {
     owner = "krakend";
     repo = "krakend-ce";
     rev = "refs/tags/v${version}";
-    sha256 = "sha256-32bVG2nreQYLs2CnwHJJpqDe9G2fw+vBZkLV62hZUFs=";
+    sha256 = "sha256-apGugFwU1DCDggLL0cpjAjexG2GronITa7X+ralEmd8=";
   };
 
   vendorHash = "sha256-49uXn/FSo180l6bwPZMPaRVBRbNC4zk+TH0z64PFiz4=";
@@ -32,6 +33,10 @@ buildGo124Module rec {
   postInstall = ''
     mv $out/bin/* $out/bin/krakend
   '';
+
+  passthru = {
+    updateScript = nix-update-script { };
+  };
 
   meta = with lib; {
     description = "KrakenD Community Edition: High-performance, stateless, declarative, API Gateway written in Go. ";
