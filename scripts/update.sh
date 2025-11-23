@@ -6,3 +6,4 @@ set -e
 nix-update --commit krakend-ce
 nix-update --commit openapi-changes
 nix-update --commit vacuum
+nix-update --commit oasdiff
