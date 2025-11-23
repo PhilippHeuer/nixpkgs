@@ -4,3 +4,6 @@ _default:
 # tasks
 update:
 	nix flake update
+
+update-packages:
+    ./scripts/update.sh
