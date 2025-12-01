@@ -9,12 +9,12 @@
 
 buildGoModule rec {
   pname = "oasdiff";
-  version = "v1.11.7";
+  version = "1.11.7";
 
   src = fetchFromGitHub {
     owner = "oasdiff";
     repo = "oasdiff";
-    rev = version;
+    rev = "v" + version;
     hash = "sha256-QfTJEwHsjO4ilbU18iDzCCthhb5s2JZRsGIB+SQiBaI=";
   };
   vendorHash = "sha256-TGkaEH1cExkMJOVJ5iUgnBhb3P9hQhpbC8FIGdtHk5A=";

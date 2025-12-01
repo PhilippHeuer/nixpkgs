@@ -17,7 +17,7 @@ buildGoModule rec {
     repo = "pb33f-openapi-changes";
     #owner = "pb33f";
     #repo = "openapi-changes";
-    rev = version;
+    rev = "v" + version;
     hash = "sha256-L/vm+IrKa/MciarvgjIgDBfuDK/Fr31Xw0HIQx5oSo4=";
   };
   vendorHash = "sha256-Ep1YhxReG7UbRM9s0KVO9LPRur2HwAwjZWNsvRQWf6U=";
