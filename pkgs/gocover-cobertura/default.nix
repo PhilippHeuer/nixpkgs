@@ -3,10 +3,9 @@
 , installShellFiles
 , fetchFromGitHub
 , buildGoModule
-, buildGo123Module
 }:
 
-buildGo123Module rec {
+buildGoModule rec {
   # renovate: datasource=github-releases depName=boumenot/gocover-cobertura
   pname = "gocover-cobertura";
   version = "1.4.0";

@@ -3,10 +3,9 @@
 , installShellFiles
 , fetchFromGitLab
 , buildGoModule
-, buildGo123Module
 }:
 
-buildGo123Module rec {
+buildGoModule rec {
   # renovate: datasource=gitlab-tags depName=ignis-build/sarif-converter
   pname = "gitlab-sarif-converter";
   version = "0.9.4";
