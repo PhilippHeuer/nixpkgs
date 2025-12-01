@@ -1,5 +1,6 @@
 { lib
 , python3
+, python3Packages
 , fetchFromGitHub
 , gobject-introspection
 , wrapGAppsHook3
@@ -9,6 +10,7 @@
 python3.pkgs.buildPythonApplication rec {
   pname = "waypaper";
   version = "0.0.0";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "philippheuer";
@@ -16,6 +18,8 @@ python3.pkgs.buildPythonApplication rec {
     rev = "c86462fdcd29937b613e3354da3bf98977e6cd44";
     hash = "sha256-gh3Mip9pUHbn7xM1IDR5UA+ueCTH+Bs0X1WO6pYDu3I=";
   };
+
+  build-system = with python3Packages; [ setuptools ];
 
   nativeBuildInputs = [
     gobject-introspection
