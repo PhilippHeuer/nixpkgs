@@ -6,14 +6,14 @@
 }:
 
 buildGoModule rec {
-  # renovate: datasource=github-releases depName=primelib/primecodegen-cli
+  # renovate: datasource=github-releases depName=primelib/primecodegen
   pname = "primecodegen";
   version = "v0.1.0";
 
   src = fetchFromGitHub {
     owner = "primelib";
     repo = "primecodegen";
-    rev = "1f3160eb65ffb96436a570bff20a90085e172062"; # version
+    rev = "1f3160eb65ffb96436a570bff20a90085e172062";
     sha256 = "sha256-oZgLONDy0Xqu4kfCr2Jwg5HSTq/bgpeMPO6Ac9AUYn8=";
   };
   vendorHash = "sha256-EXc81NKOw9f9vmWbbjQ75wqY2sDjC8suRL35+BOZNR4=";
