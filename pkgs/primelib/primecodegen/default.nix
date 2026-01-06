@@ -12,11 +12,11 @@ buildGoModule rec {
 
   src = fetchFromGitHub {
     owner = "primelib";
-    repo = "primecodegen-cli";
-    rev = "ef1ab707f308821414e3b0b06b6e5aff3d03683a"; # version
-    sha256 = "sha256-z41Auv8ho6VlESnTy2uEnli1R+SBxgmoKabH0zMCS8Y=";
+    repo = "primecodegen";
+    rev = "1f3160eb65ffb96436a570bff20a90085e172062"; # version
+    sha256 = "sha256-oZgLONDy0Xqu4kfCr2Jwg5HSTq/bgpeMPO6Ac9AUYn8=";
   };
-  vendorHash = "sha256-3RTkUkkzWv80dw+c285Bn5t2hGLLT2n2pZnyWrYmpao=";
+  vendorHash = "sha256-EXc81NKOw9f9vmWbbjQ75wqY2sDjC8suRL35+BOZNR4=";
 
   ldflags = [
     "-s"
@@ -45,7 +45,7 @@ buildGoModule rec {
 
   # metadata
   meta = with lib; {
-    homepage = "https://github.com/primelib/primecodegen-cli";
+    homepage = "https://github.com/primelib/primecodegen";
     description = "PrimeCodeGen is a code generator for API specifications";
     license = licenses.mit;
     platforms = platforms.unix;
