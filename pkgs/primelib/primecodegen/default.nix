@@ -9,7 +9,7 @@
 buildGoModule rec {
   # renovate: datasource=github-releases depName=primelib/primecodegen
   pname = "primecodegen";
-  version = "v0.1.0";
+  version = "0.1.0";
 
   src = fetchFromGitHub {
     owner = "primelib";
