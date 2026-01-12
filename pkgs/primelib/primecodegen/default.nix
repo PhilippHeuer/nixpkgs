@@ -1,8 +1,9 @@
-{ lib
-, stdenv
-, installShellFiles
-, fetchFromGitHub
-, buildGoModule
+{
+  lib,
+  stdenv,
+  installShellFiles,
+  fetchFromGitHub,
+  buildGoModule,
 }:
 
 buildGoModule rec {
@@ -13,10 +14,10 @@ buildGoModule rec {
   src = fetchFromGitHub {
     owner = "primelib";
     repo = "primecodegen";
-    rev = "1f3160eb65ffb96436a570bff20a90085e172062";
-    sha256 = "sha256-oZgLONDy0Xqu4kfCr2Jwg5HSTq/bgpeMPO6Ac9AUYn8=";
+    rev = "88fa01ad527bd11ca97f1a83cfbe765eb20f9e75";
+    sha256 = "sha256-0bhdD8BJQs44Gum6cTz9KGABBjzzm3TNKiHx9iHGFbI=";
   };
-  vendorHash = "sha256-EXc81NKOw9f9vmWbbjQ75wqY2sDjC8suRL35+BOZNR4=";
+  vendorHash = "sha256-uXa8GrCnZTMGMVppZgo/TY/yrAZe42QimeMSz7X9eAk=";
 
   ldflags = [
     "-s"
@@ -36,12 +37,12 @@ buildGoModule rec {
 
   # completions
   postInstall = ''
-      # install shell completion
-      installShellCompletion --cmd primecodegen \
-        --bash <($out/bin/primecodegen completion bash) \
-        --fish <($out/bin/primecodegen completion fish) \
-        --zsh  <($out/bin/primecodegen completion zsh)
-    '';
+    # install shell completion
+    installShellCompletion --cmd primecodegen \
+      --bash <($out/bin/primecodegen completion bash) \
+      --fish <($out/bin/primecodegen completion fish) \
+      --zsh  <($out/bin/primecodegen completion zsh)
+  '';
 
   # metadata
   meta = with lib; {
