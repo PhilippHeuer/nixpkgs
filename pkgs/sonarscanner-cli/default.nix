@@ -7,11 +7,11 @@
 
 let
   pname = "sonar-scanner-cli";
-  version = "7.3.0.5189";
+  version = "8.0.1.6346";
 
   src = fetchzip {
     url = "https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${version}.zip";
-    sha256 = "sha256-GJdrD5F9zi5XeyQRGXTs8agDULOWjFtB9OXFeFPgRFM=";
+    sha256 = "sha256-AI2wxl6TQGAfNxCWKTy/Rk+5C+r40Dy7HfS5X8mdM9s=";
     stripRoot = true;
   };
 
