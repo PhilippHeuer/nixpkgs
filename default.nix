@@ -23,6 +23,7 @@
   primecodegen = pkgs.callPackage ./pkgs/primelib/primecodegen { };
   openapi-changes = pkgs.callPackage ./pkgs/pb33f/openapi-changes { };
   vacuum = pkgs.callPackage ./pkgs/pb33f/vacuum { };
+  printing-press = pkgs.callPackage ./pkgs/pb33f/printing-press { };
   rundeck-cli = pkgs.callPackage ./pkgs/rundeck-cli { };
   rconcli = pkgs.callPackage ./pkgs/rconcli { };
   waypaper = pkgs.callPackage ./pkgs/waypaper { };
