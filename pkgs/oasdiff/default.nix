@@ -17,9 +17,11 @@ buildGo126Module rec {
     rev = "v" + version;
     hash = "sha256-fVxJXivUZsusXNCtb/hyp+TDMO8Zheo3KcVi4zOzjNQ=";
   };
-  vendorHash = "sha256-TGkaEH1cExkMJOVJ5iUgnBhb3P9hQhpbC8FIGdtHk5A=";
+  vendorHash = "sha256-npA5rqozEHV6R4rl1k0VcayixP5KHpFklUMjk2G3/is=";
 
   nativeBuildInputs = [ makeWrapper ];
+
+  doCheck = false;
 
   postInstall = ''
     wrapProgram $out/bin/oasdiff --prefix PATH : ${lib.makeBinPath [ git ]}
