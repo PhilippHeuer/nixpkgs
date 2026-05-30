@@ -9,15 +9,15 @@
 buildGoModule rec {
   # renovate: datasource=github-releases depName=primelib/primecodegen
   pname = "primecodegen";
-  version = "0.3.1";
+  version = "0.4.0";
 
   src = fetchFromGitHub {
     owner = "primelib";
     repo = "primecodegen";
-    rev = "efebf2b7d9a1b0946def23507b5e5f6be4ecdf3f";
-    sha256 = "sha256-S13pfVBZUDpNTr0J1jZCKw+zYhxV3TUOpDwFDz7zEgQ=";
+    rev = "d40209f82f400f01c15b0172c72e4da35e6f9d17";
+    sha256 = "sha256-iXM3qDxc4tNY+FrMeZj1iVSXRaipIYGXuHyH0YgVnWY=";
   };
-  vendorHash = "sha256-qaXqF+EK7sO7i0ZIQD/OkCpeJEvq/h0W/w2cdEZhoJI=";
+  vendorHash = "sha256-/HgPsk7lLy9MPsnEvP52LogQlm8ghtKs0uoVqkH8Qb4=";
 
   ldflags = [
     "-s"
