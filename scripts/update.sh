@@ -7,3 +7,4 @@ nix-update --commit krakend-ce
 nix-update --commit openapi-changes
 nix-update --commit vacuum
 nix-update --commit oasdiff
+nix-update --commit printing-press
