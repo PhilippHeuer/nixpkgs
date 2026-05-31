@@ -4,10 +4,9 @@
   installShellFiles,
   fetchFromGitHub,
   buildGoModule,
-  buildGo124Module,
 }:
 
-buildGo124Module rec {
+buildGoModule rec {
   # renovate: datasource=github-releases depName=philippheuer/fuzzmux
   pname = "fuzzmux";
   version = "v0.10.2";

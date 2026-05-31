@@ -4,10 +4,9 @@
   installShellFiles,
   fetchFromGitHub,
   buildGoModule,
-  buildGo124Module,
 }:
 
-buildGo124Module rec {
+buildGoModule rec {
   # renovate: datasource=github-releases depName=cidverse/repofork
   pname = "repofork";
   version = "v0.1.0";
