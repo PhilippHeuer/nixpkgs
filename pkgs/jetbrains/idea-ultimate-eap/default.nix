@@ -2,7 +2,7 @@
   pkgs,
 }:
 
-(pkgs.jetbrains.idea-ultimate.overrideAttrs(oldAttrs: {
+(pkgs.jetbrains.idea.overrideAttrs(oldAttrs: {
     version = "2025.2 EAP 7";
     src = pkgs.fetchurl {
         url = "https://download-cdn.jetbrains.com/idea/ideaIU-252.23591.19.tar.gz";
