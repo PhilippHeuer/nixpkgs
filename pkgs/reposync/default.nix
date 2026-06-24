@@ -3,20 +3,21 @@
 , installShellFiles
 , fetchFromGitHub
 , buildGoModule
+, nix-update-script
 }:
 
 buildGoModule rec {
   # renovate: datasource=github-releases depName=cidverse/reposync
   pname = "reposync";
-  version = "v0.6.0";
+  version = "0.6.1";
 
   src = fetchFromGitHub {
     owner = "cidverse";
     repo = "reposync";
-    rev = version;
-    sha256 = "sha256-2AdxSp8cN4MiQKZNMidp4490pNvLDNZeIqeBfiyPEXk=";
+    rev = "refs/tags/v${version}";
+    sha256 = "sha256-8lAGi6cUpQ428AK+EUinD3mQx6gF9NLslwioIvB6T44=";
   };
-  vendorHash = "sha256-pGppsuVQN7saM92MRctqowee7Iv+sOrMa1IwDfhxSB0=";
+  vendorHash = "sha256-wrZvXxWDtUttmb+KvvBX9zi/UV3NfCTnhDYILwFjuZg=";
 
   ldflags = [
     "-s"
@@ -42,6 +43,10 @@ buildGoModule rec {
         --fish <($out/bin/reposync completion fish) \
         --zsh  <($out/bin/reposync completion zsh)
     '';
+
+  passthru = {
+    updateScript = nix-update-script { };
+  };
 
   # metadata
   meta = with lib; {
