@@ -5,9 +5,10 @@ set -e
 
 # my
 nix-update --commit fuzzmux
-nix-update --commit primecodegen
 nix-update --commit reposync
+nix-update --commit repofork
 nix-update --commit ocisync
+nix-update --commit primecodegen
 
 # others
 nix-update --commit krakend-ce
