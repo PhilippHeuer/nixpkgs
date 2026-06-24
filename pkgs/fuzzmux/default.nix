@@ -4,20 +4,21 @@
   installShellFiles,
   fetchFromGitHub,
   buildGoModule,
+  nix-update-script,
 }:
 
 buildGoModule rec {
   # renovate: datasource=github-releases depName=philippheuer/fuzzmux
   pname = "fuzzmux";
-  version = "v0.10.2";
+  version = "0.10.3";
 
   src = fetchFromGitHub {
     owner = "PhilippHeuer";
     repo = "fuzzmux";
-    rev = version;
-    sha256 = "sha256-t7+j2g/ydxVcECw/pHGEdNxcxilMCxEiD3bVF6sA60w=";
+    rev = "refs/tags/v${version}";
+    sha256 = "sha256-egPO7NzbxJf8LRZmi78DW9b+leAWgW3W457JAG6ByC8=";
   };
-  vendorHash = "sha256-fUXkpeOR0W/Sqh5OpV2xM2KDsohexeDbkGopecfV5eY=";
+  vendorHash = "sha256-Qnc+IFMcrkTwZR/D+K0oWWYk3mw6Ab1aYh5GBk4Lexo=";
 
   ldflags = [
     "-s"
@@ -46,6 +47,10 @@ buildGoModule rec {
       --fish <($out/bin/tmx completion fish) \
       --zsh  <($out/bin/tmx completion zsh)
   '';
+
+  passthru = {
+    updateScript = nix-update-script { };
+  };
 
   # metadata
   meta = with lib; {
