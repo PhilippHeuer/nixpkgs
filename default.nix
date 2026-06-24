@@ -15,6 +15,7 @@
   fuzzmux = pkgs.callPackage ./pkgs/fuzzmux { };
   repofork = pkgs.callPackage ./pkgs/repofork { };
   reposync = pkgs.callPackage ./pkgs/reposync { };
+  ocisync = pkgs.callPackage ./pkgs/ocisync { };
   normalizeci = pkgs.callPackage ./pkgs/normalizeci { };
   repoanalyzer = pkgs.callPackage ./pkgs/repoanalyzer { };
   driveguard = pkgs.callPackage ./pkgs/driveguard { };
