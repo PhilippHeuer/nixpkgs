@@ -9,13 +9,13 @@
 buildGoModule rec {
   # renovate: datasource=github-releases depName=krakend/krakend-ce
   pname = "krakend-ce";
-  version = "2.13.6";
+  version = "2.13.7";
 
   src = fetchFromGitHub {
     owner = "krakend";
     repo = "krakend-ce";
     rev = "refs/tags/v${version}";
-    sha256 = "sha256-bUP3MRskfQ6hmLmvj2+kIv4T6YICbOGlBfLGqc6rhHc=";
+    sha256 = "sha256-Z9OMHFAVzgmrjofyHBB3fCH2lo4dLvKkK445ze7xihU=";
   };
 
   vendorHash = "sha256-s60mmq6lMoHdnl0QlZOv+TI8gUeER8whocJp4fsXBA4=";
