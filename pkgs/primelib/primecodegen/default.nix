@@ -4,17 +4,18 @@
   installShellFiles,
   fetchFromGitHub,
   buildGoModule,
+  nix-update-script,
 }:
 
 buildGoModule rec {
   # renovate: datasource=github-releases depName=primelib/primecodegen
   pname = "primecodegen";
-  version = "0.5.0";
+  version = "0.1.0";
 
   src = fetchFromGitHub {
     owner = "primelib";
     repo = "primecodegen";
-    rev = "d6731297a77337392241f8781193aabfd3f60a45";
+    rev = "refs/tags/v${version}";
     sha256 = "sha256-TlX98s7pChZZtF5snCgt/ej39R9N7sfy9ySrSUAnTfM=";
   };
   vendorHash = "sha256-56oqFy0PyXMA5FQTQpMhW2lv+j5aklHiQZ6nx8tt7WE=";
@@ -43,6 +44,10 @@ buildGoModule rec {
       --fish <($out/bin/primecodegen completion fish) \
       --zsh  <($out/bin/primecodegen completion zsh)
   '';
+
+  passthru = {
+    updateScript = nix-update-script { };
+  };
 
   # metadata
   meta = with lib; {
