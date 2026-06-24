@@ -4,20 +4,21 @@
   installShellFiles,
   fetchFromGitHub,
   buildGoModule,
+  nix-update-script,
 }:
 
 buildGoModule rec {
   # renovate: datasource=github-releases depName=cidverse/repofork
   pname = "repofork";
-  version = "v0.1.0";
+  version = "0.1.0";
 
   src = fetchFromGitHub {
     owner = "cidverse";
     repo = "repofork";
-    rev = "23240760eef7444e77fc30edd85ad367c30f6790";
-    sha256 = "sha256-Z8I100wLAsR8oPhTALWkBDnS5Hi0dISq9ZfHCHkyYPA=";
+    rev = "refs/tags/v${version}";
+    sha256 = "sha256-MnshuFXsgglkhsU+Hw6e2IGoowRmP35uLeT1qTaOcGQ=";
   };
-  vendorHash = "sha256-BwTQ0GwAmApSTcsHSmjx/srfVoGV1rqV/32bKVps9qk=";
+  vendorHash = "sha256-anyzR0IwJ+U13B2VX4fR2HBbahrQax6+pnt3beIqixA=";
 
   ldflags = [
     "-s"
@@ -38,16 +39,20 @@ buildGoModule rec {
   # completions
   postInstall = ''
     # install shell completion
-    installShellCompletion --cmd tmx \
+    installShellCompletion --cmd repofork \
       --bash <($out/bin/repofork completion bash) \
       --fish <($out/bin/repofork completion fish) \
       --zsh  <($out/bin/repofork completion zsh)
   '';
 
+  passthru = {
+    updateScript = nix-update-script { };
+  };
+
   # metadata
   meta = with lib; {
     homepage = "https://github.com/cidverse/repofork";
-    description = "fuzzmux";
+    description = "repofork";
     license = licenses.mit;
     platforms = platforms.unix;
     sourceProvenance = with sourceTypes; [
