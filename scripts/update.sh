@@ -3,6 +3,11 @@
 
 set -e
 
+# my
+nix-update --commit primecodegen
+nix-update --commit reposync
+
+# others
 nix-update --commit krakend-ce
 nix-update --commit openapi-changes
 nix-update --commit vacuum
