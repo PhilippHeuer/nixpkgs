@@ -3,20 +3,21 @@
 , installShellFiles
 , fetchFromGitHub
 , buildGoModule
+, nix-update-script
 }:
 
 buildGoModule rec {
   # renovate: datasource=github-releases depName=philippheuer/dotfiles-cli
   pname = "dotfiles-cli";
-  version = "v0.3.1";
+  version = "0.4.0";
 
   src = fetchFromGitHub {
     owner = "PhilippHeuer";
     repo = "dotfiles-cli";
-    rev = version;
-    sha256 = "sha256-I/UY0jaIxKZ1aC9gUy/vtxzyq4gNtUeORHtfdpvrNow=";
+    rev = "refs/tags/v${version}";
+    sha256 = "sha256-EUHbF4YGDSn183g5/eV+gj/UUF2pS8ddclN4zdeEIQw=";
   };
-  vendorHash = "sha256-lfCp0ngobwDgmmZHuhlStFnnj1xUHObutEnVVRC0KEo=";
+  vendorHash = "sha256-FDAtxdJBsILCtEloxigpnyIbQKgqJFBVo3qdEETFTFc=";
 
   ldflags = [
     "-s"
@@ -45,6 +46,10 @@ buildGoModule rec {
         --fish <($out/bin/dotfiles completion fish) \
         --zsh  <($out/bin/dotfiles completion zsh)
     '';
+
+  passthru = {
+    updateScript = nix-update-script { };
+  };
 
   # metadata
   meta = with lib; {

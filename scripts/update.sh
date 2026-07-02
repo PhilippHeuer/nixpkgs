@@ -4,6 +4,7 @@
 set -e
 
 # my
+nix-update --commit dotfiles
 nix-update --commit fuzzmux
 nix-update --commit reposync
 nix-update --commit repofork
