@@ -9,16 +9,16 @@
 buildGoModule rec {
   # renovate: datasource=github-releases depName=daveshanley/vacuum
   pname = "vacuum";
-  version = "0.29.5";
+  version = "0.29.9";
 
   src = fetchFromGitHub {
     owner = "daveshanley";
     repo = "vacuum";
     rev = "refs/tags/v${version}";
-    hash = "sha256-JHJBxtrtrwmfTaFnl5YTDmJtj54ij40tA+m6G45KzyE=";
+    hash = "sha256-dcc29hbllJqEI9Qv3UnLVEHfzWF0CQYalKCyUlCBsEA=";
   };
 
-  vendorHash = "sha256-nPhazvbCiOM3dbVCUHPr0vxSZtEKr/QuFxoR1y6pQQk=";
+  vendorHash = "sha256-/0dAwcg3s5dTu97msrnwuOWjeCbmYJqxcldC2xLm3y0=";
 
   doCheck = false;
 
