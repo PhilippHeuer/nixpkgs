@@ -23,10 +23,10 @@ buildGoModule rec {
   ldflags = [
     "-s"
     "-w"
-    "-X main.Version=${version}"
-    "-X main.CommitHash=none"
-    "-X main.RepositoryStatus=clean"
-    "-X main.BuildAt=none"
+    "-X main.version=${version}"
+    "-X main.commit=none"
+    "-X main.date=none"
+    "-X main.status=clean"
   ];
 
   nativeBuildInputs = [
