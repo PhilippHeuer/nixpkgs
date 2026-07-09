@@ -42,5 +42,6 @@
   gocover-cobertura = pkgs.callPackage ./pkgs/gocover-cobertura { };
   krakend-ce = pkgs.callPackage ./pkgs/krakend-ce { };
   zizmor = pkgs.callPackage ./pkgs/zizmor { };
+  vscodium = pkgs.callPackage ./pkgs/vscodium { };
   oasdiff = pkgs.callPackage ./pkgs/oasdiff { };
 }
