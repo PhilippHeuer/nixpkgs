@@ -9,15 +9,15 @@
 buildGoModule rec {
   # renovate: datasource=github-releases depName=philippheuer/dotfiles-cli
   pname = "dotfiles-cli";
-  version = "0.4.0";
+  version = "0.5.0";
 
   src = fetchFromGitHub {
     owner = "PhilippHeuer";
     repo = "dotfiles-cli";
     rev = "refs/tags/v${version}";
-    sha256 = "sha256-EUHbF4YGDSn183g5/eV+gj/UUF2pS8ddclN4zdeEIQw=";
+    sha256 = "sha256-+iG3iLYrWc1TXtvSMZHlhpzZ+pfhPtX2VgWYZa4fWas=";
   };
-  vendorHash = "sha256-FDAtxdJBsILCtEloxigpnyIbQKgqJFBVo3qdEETFTFc=";
+  vendorHash = "sha256-znOfKX+eYEexrWkPnkTvFkQa1YlU6KId+reCXma9//M=";
 
   ldflags = [
     "-s"
