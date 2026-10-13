@@ -12,6 +12,7 @@ nix-update --commit ocisync
 nix-update --commit primecodegen
 
 # others
+nix-update --commit openshell
 nix-update --commit krakend-ce
 nix-update --commit openapi-changes
 nix-update --commit vacuum
