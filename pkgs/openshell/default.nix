@@ -66,7 +66,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       see and do, and where inference goes. It enables claws to run in isolated
       sandboxes, with fine-grained control over privacy and security.
     '';
-    maintainers = with lib.maintainers; [ wishstudio ];
     mainProgram = "openshell";
     platforms = lib.platforms.all;
   };

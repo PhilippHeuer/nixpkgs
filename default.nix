@@ -10,6 +10,7 @@
 
   # Packages
   openshell = pkgs.callPackage ./pkgs/openshell { };
+  openshell-gateway = pkgs.callPackage ./pkgs/openshell-gateway { };
   appinspector = pkgs.callPackage ./pkgs/appinspector { };
   cid = pkgs.callPackage ./pkgs/cid { };
   dotfiles = pkgs.callPackage ./pkgs/dotfiles { };
