@@ -9,16 +9,16 @@
 buildGo126Module rec {
   # renovate: datasource=github-releases depName=pb33f/printing-press
   pname = "printing-press";
-  version = "0.0.27";
+  version = "0.0.28";
 
   src = fetchFromGitHub {
     owner = "pb33f";
     repo = "printing-press";
     rev = "refs/tags/v${version}";
-    hash = "sha256-Jd0igQ17e7Z8e1kHokVxjsuzyVC/LKSpW5F7RzGayKc=";
+    hash = "sha256-1jTcLKaN2eZdAmojz7oWQhuRrkef9U0MOxgNd9VsXJc=";
   };
 
-  vendorHash = "sha256-cseqDdw43IZiAEiFc2gn0qWVzc+GqCy7cLJDB+t1uM0=";
+  vendorHash = "sha256-yjFCtxnMpG5bJluEqDZurXldUBWKyv/eJBv+2MZSjxA=";
 
   doCheck = false;
 
