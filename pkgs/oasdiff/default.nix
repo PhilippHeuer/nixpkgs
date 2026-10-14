@@ -9,15 +9,15 @@
 
 buildGo126Module rec {
   pname = "oasdiff";
-  version = "1.27.0";
+  version = "1.33.0";
 
   src = fetchFromGitHub {
     owner = "oasdiff";
     repo = "oasdiff";
     rev = "v" + version;
-    hash = "sha256-n0svl39gtqa8MrNAeRDZtmH/JcqcsXjFvsn1HjofMZU=";
+    hash = "sha256-tCRk5lgZFTpGlI6w0gniaorRnJMYi/g7wcYBcMIfks0=";
   };
-  vendorHash = "sha256-hV83ROWElYYaK/zkwSp436Lg/f2U/CcknmPuS9vB+gc=";
+  vendorHash = "sha256-OEZgmxEQ8OKVkfk0009+2HdoKXyImI/1VnLi6P0EkEQ=";
 
   nativeBuildInputs = [ makeWrapper ];
 
