@@ -12,7 +12,7 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "openshell";
-  version = "0.1.4-pre.5";
+  version = "0.1.4";
 
   src = fetchFromGitHub {
     owner = "NVIDIA";
